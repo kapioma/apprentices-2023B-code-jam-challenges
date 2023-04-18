@@ -2,9 +2,11 @@
 
 ## Challenges
 - [Punched Cards](./PunchedCards/)
-    - Python
+    - [Python](./PunchedCards/punched.py)
     - Dart
-    - Typescript
+        - [Approach one](./PunchedCards/punchedCard.dart)
+        - [Approach two](./PunchedCards/punched_cards.dart)
+    - [Typescript](./PunchedCards/punchedCard.ts)
     - Kotlin
 - [3D Printing](./3DPrinting/)
     - Python
