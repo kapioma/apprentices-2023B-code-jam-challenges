@@ -1,9 +1,30 @@
-const readline = require('readline/promises');
-const { stdin: input, stdout: output } = require('process');
+//#region read input input_lines. 
+declare var require: any;
+declare var process: any;
+
+const readline = require('readline');
+
+function read_lines_from_stdin(callback: (input_lines: string[]) => void) {
+  const input_lines: string[] = [];
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+    terminal: false
+  });
+
+  rl.on('line', (input: string) => {
+    input_lines.push(input);
+  });
+
+  rl.on('close', () => {
+    callback(input_lines);
+  });
+}
+//#endregion
 
 const logic = (value: string[], tests: number) => {
   let test_num: number = 1;
-  for (let i = 0; test_num <= tests; test_num++) {
+  for (let i = 1; test_num <= tests; test_num++) {
 
     const printer_1: string[] = value[i].split(" ");
     const printer_2: string[] = value[++i].split(" ");
@@ -71,26 +92,10 @@ const logic = (value: string[], tests: number) => {
   }
 }
 
-// READ INPUTS: TESTS CASES # AND PRINTER VALUES 
-const inputvar = (async () => {
-  const lines: string[] = [];
-  const rl = readline.createInterface({ input, output });
-
-  try {
-    const answer = await rl.question('Tests: ');
-    const num = answer * 3
-    let i = 0;
-    while (i != num) {
-      const line = await rl.question(i + 1 + ': ')
-      lines.push(line)
-      i++;
-    }
-    //Call the logic function and pass as parameters, the number of tests as the printer levels
-    logic(lines, answer)
-  } catch (err) {
-    console.log(`Error: `, err);
-  } finally {
-    rl.close();
-  }
-  return lines
-})();
+function main() {
+  read_lines_from_stdin((input_lines) => {
+    let tests = parseInt(input_lines[0]);
+    logic(input_lines, tests)
+  })
+}
+main();
