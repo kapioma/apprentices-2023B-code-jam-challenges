@@ -41,6 +41,6 @@ if __name__ == '__main__':
             max_die_value = max(max_die_value, die)
             dice_bucket[die] += 1
 
-        used_dice = get_used_dice(dice_bucket, max_die_value, dice)
+        used_dice = get_used_dice(dice_bucket, max_die_value)
         print(f'Case #{testCase + 1}: {used_dice}')
         
