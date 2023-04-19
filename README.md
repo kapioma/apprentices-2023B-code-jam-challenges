@@ -7,12 +7,14 @@
         - [Approach one](./PunchedCards/punchedCard.dart)
         - [Approach two](./PunchedCards/punched_cards.dart)
     - [Typescript](./PunchedCards/punchedCard.ts)
-    - Kotlin
+    - [Kotlin](./PunchedCards/punchedCards.kt)
 - [3D Printing](./3DPrinting/)
     - Python
+        - [Approach one](./3DPrinting/3dprinting.py)
+        - [Approach two](./3DPrinting/Python3DPrinting.py)
     - Dart
-    - Typescript
-    - Kotlin
+    - [Typescript](./3DPrinting/ts3dprinting.ts)
+    - [Kotlin](./3DPrinting/3dPrinting.kt)
 - [d1000000](./d1000000/)
     - Python
     - Dart
