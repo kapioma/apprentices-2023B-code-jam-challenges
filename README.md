@@ -14,7 +14,7 @@
         - [Approach two](./3DPrinting/Python3DPrinting.py)
     - Dart
     - [Typescript](./3DPrinting/ts3dprinting.ts)
-    - Kotlin
+    - [Kotlin](./3DPrinting/3dPrinting.kt)
 - [d1000000](./d1000000/)
     - Python
     - Dart
