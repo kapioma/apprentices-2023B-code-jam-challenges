@@ -48,7 +48,7 @@ List<dynamic> give_color_x(List<List<int>> printers, int color_pos)
         ];
 }
 
-List<int>? return_solution(List<List<int>> printers)
+List<int> return_solution(List<List<int>> printers)
 {
     List<int> my_colors = [0, 0, 0, 0];
     for (int i = 0; i < 4; i++)
@@ -64,14 +64,15 @@ List<int>? return_solution(List<List<int>> printers)
             return my_colors;
         }
     }
-    return null;
+    return my_colors;
 }
 
 
-void print_solution(int test_case, List<int>? result)
+void print_solution(int test_case, List<int> result)
 {
     stdout.write('Case #${test_case}: ');
-    if (result != null)
+    int sum_of_units = result.reduce((a, b) => a + b);
+    if (sum_of_units == 1000000)
     {
         for (int i = 0; i < 4; i++)
         {
@@ -93,7 +94,7 @@ void main() {
     {
         List<List<int>> my_printers = get_printers_input();
         
-        List<int>? result = return_solution(my_printers);
+        List<int> result = return_solution(my_printers);
         print_solution(i, result);
     }
 }
