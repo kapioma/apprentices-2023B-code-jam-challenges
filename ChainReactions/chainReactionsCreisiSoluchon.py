@@ -2,6 +2,10 @@
 Es una solución que apenas voy a probar. La neta, yo creo que va a tirar TLE, pero 
 esto es con fé y confiando en el corazón de las cartas.
 No es mucho, pero es trabajo honesto.
+
+UPDATE: Está mal este approach, se me olvidó considerar el caso donde la cadena se interrumpe por nodo visitado 
+y se suma ese fun fact. :c 
+Voy a echarle otra pensada al problema. ggg
 """
 
 def get_max_fun_factor(module_chain : dict, current_module : int, roots : list):
